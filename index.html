@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>SuperApp - Início</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>SuperApp</h1></header>
+  <nav>
+    <ul>
+    <a href="index.html">principal</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="contato.html">Contato</a>
+  </ul>
+  </nav>
+  <section>
+		<h2>Bem Vindo ao nosso Site!</h2>
+		<p>Este é site com responsividade.</p>
+	</section>
+<h2>🎵🎧🎵 Música</h2>
+ <!-- Botões de categoria -->
+  <div class="categorias">
+    <button onclick="filtrarCategoria('todas')" class="ativo">Todas</button>
+    <button onclick="filtrarCategoria('pop')">Pop</button>
+    <button onclick="filtrarCategoria('rock')">Rock</button>
+    <button onclick="filtrarCategoria('eletronica')">Eletrônica</button>
+ <div class="music">
+    <div class="musica" data-categoria="pop">
+      <iframe src="https://open.spotify.com/embed/track/4sTlQPMyoFMPdhAJvErBN3" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <div class="musica" data-categoria="rock">
+      <iframe src="https://open.spotify.com/embed/track/0EgkGFmAdFLkZVtbyGlQRe" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+   <iframe src="https://open.spotify.com/embed/track/6gBFPUFcJLzWGx4lenP6h2" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+   <iframe src="https://open.spotify.com/embed/track/4MF0VMffyxHsy3GZwwUnAs" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+   <iframe src="https://open.spotify.com/embed/track/37Tmv4NnfQeb0ZgUC4fOJj" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+   <iframe src="https://open.spotify.com/embed/track/4jh5xTsu4kWGzeh4TaRs7a" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+     <iframe src="https://open.spotify.com/embed/track/16XNk3bVCSHXN1rlwbXtHb" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+   <iframe src="https://open.spotify.com/embed/track/4mn2kNTqiGLwaUR8JdhJ1l" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+    
+    </div>
+
+    <div class="musica" data-categoria="eletronica">
+      <iframe src="https://open.spotify.com/embed/track/2HJQm4T3Pk2zvxoFhlnGjR" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe src="https://open.spotify.com/embed/track/0EgkGFmAdFLkZVtbyGlQRe" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+     <iframe src="https://open.spotify.com/embed/track/0xoYZ45fgTfyQYREZPN7Sa" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe src="https://open.spotify.com/embed/track/1BJJbSX6muJVF2AK7uH1x4" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe src="https://open.spotify.com/embed/track/6XjDF6nds4DE2BBbagZol6" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe src="https://open.spotify.com/embed/track/6rWblGW0pBcB3uygxBuWZV" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe src="https://open.spotify.com/embed/track/2qsaab4fOr8InudFeIqR5O" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe src="https://open.spotify.com/embed/track/4ctJNWQwqWRGg4bbwkx2y1" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+    </div>
+
+<div class="musica" data-categoria="pop">
+      <iframe src="https://open.spotify.com/embed/track/6jTbKd7VnhCt5qxyWTdak7" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+         
+<iframe src="https://open.spotify.com/embed/track/3a1lNhkSLSkpJE4MSHpDu9" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+    </div>
+  </div>
+
+  <script>
+    function filtrarCategoria(categoria) {
+      const musicas = document.querySelectorAll('.musica');
+      const botoes = document.querySelectorAll('.categorias button');
+
+      musicas.forEach(musica => {
+        if (categoria === 'todas' || musica.dataset.categoria === categoria) {
+          musica.style.display = 'block';
+        } else {
+          musica.style.display = 'none';
+        }
+      });
+
+      botoes.forEach(btn => btn.classList.remove('ativo'));
+      event.target.classList.add('ativo');
+    }
+  </script>
+ 
+  </div>
+
+<h2>🎬 Vídeos</h2>
+
+<iframe src="https://www.youtube.com/embed/Q_JhxKGLZhY" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/9OKjFsezw08" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/grJI9BnBHEI" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/gEYNeUBkrUM" allowfullscreen></iframe>
+
+<h2>🛒 Produtos</h2>
+
+<!-- Produto Relógio atualizado -->
+<div class="card product">
+  <img src="https://http2.mlstatic.com/D_NQ_NP_2X_612753-MLA79519023567_092024-F.webp" 
+       alt="Relógio de pulso Orient MBSS1155A" width="200">
+  <div>
+    <strong>Relógio de pulso Orient MBSS1155A com correia de aço inoxidável cor prata - fundo azul-escuro</strong><br>
+    R$ 274,17<br>
+    <a href="https://www.mercadolivre.com.br/relogio-de-pulso-orient-mbss1155a-com-corria-de-aco-inoxidavel-cor-prata-fondo-azul-escuro/p/MLB17913852#reco_item_pos=4&reco_backend=item_decorator&reco_backend_type=function&reco_client=home_items-decorator-legacy&reco_id=fe982066-9743-4868-b92b-ac9bbe2244d6&reco_model=&c_id=/home/navigation-recommendations-seed/element&c_uid=9b327dd5-f19a-4520-9a90-0eac070bee12&da_id=navigation&da_position=2&id_origin=/home/dynamic_access&da_sort_algorithm=ranker" 
+       target="_blank" class="botao">Comprar agora</a>
+  </div>
+</div>
+
+<br> <!-- Quebra de linha visual -->
+
+<!-- Produto Fone JBL -->
+<div class="card product">
+  <img src="https://http2.mlstatic.com/D_NQ_NP_962970-MLU77166977696_072024-O.webp" alt="Fone de ouvido" width="200">
+  <div>
+    <strong>Fone De Ouvido Bluetooth Com Microfone JBL Tune 510bt Azul</strong><br>
+    R$ 279,99<br>
+    <a href="https://www.mercadolivre.com.br/fone-de-ouvido-bluetooth-com-microfone-jbl-tune-510bt-azul/p/MLB17968068?highlight=false&headerTopBrand=false#polycard_client=search-nordic&searchVariation=MLB17968068&wid=MLB3926169815&position=12&search_layout=grid&type=product&tracking_id=a4b61efd-b04f-4899-af74-77864aeb7750&sid=search" 
+       target="_blank" class="botao">Comprar agora</a>
+  </div>
+</div>
+</body>
+<footer>
+    <p>&copy; 2025 SuperApp. Todos os direitos reservados.</p>
+</html>
+  
